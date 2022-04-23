@@ -54,7 +54,7 @@ class TestCredentials(unittest.TestCase):
         """
         a method before the other rest run
         """
-        self.new_credential= Credentials('emai','CalebKabaya','Mbuguack')
+        self.new_credential= Credentials('email','CalebKabaya','Mbuguack')
     
     def test_init_(self):
         """

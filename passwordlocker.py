@@ -30,6 +30,16 @@ class User :
       """
       User.user_list.remove(self)
 
-      
+
 class Credentials:
-    pass
+    """
+    Create credentials  class
+    """
+    credentials_list = []
+    def __init__(self,account,name, password):
+        """
+        method that defines user credentials to be stored
+        """
+        self.account = account
+        self.name = name
+        self.password = password
