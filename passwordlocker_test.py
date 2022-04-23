@@ -46,5 +46,27 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),0)
 
+class TestCredentials(unittest.TestCase):
+    """
+    a class to test and validate user  credentials
+    """  
+    def setUp(self):
+        """
+        a method before the other rest run
+        """
+        self.new_credential= Credentials('emai','CalebKabaya','Mbuguack')
+    
+    def test_init_(self):
+        """
+        a test to initalize the new credential instance
+        """
+        self.assertEqual(self.new_credential.account,'email')
+        self.assertEqual(self.new_credential.name,'CalebKabaya')
+        self.assertEqual(self.new_credential.password,'Mbuguack')
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()        
