@@ -49,3 +49,5 @@ class Credentials:
          a methode to save the credentials
         """
         Credentials.credentials_list.append(self)
+    def delete_credentials(self):
+        pass    
