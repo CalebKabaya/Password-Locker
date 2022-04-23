@@ -1,5 +1,8 @@
 
 
+from requests import delete
+
+
 class User :
     """"
      my class which i will use to craeat new instances
@@ -16,8 +19,15 @@ class User :
        """
 
       User.user_list.append(self)
+    
+    @classmethod
+    def show_user(cls):
+        return cls.user_list
 
-
-
+    def delete_user(self):
+      """
+      method to delete user from  the list
+      """
+      User.user_list.remove(self)
 class Credentials:
     pass
