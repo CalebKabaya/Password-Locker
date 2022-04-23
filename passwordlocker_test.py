@@ -68,7 +68,7 @@ class TestCredentials(unittest.TestCase):
         """
         test if the credatial are saved in the sredential list
         """
-        self.new_credential.save_details()
+        self.new_credential.save_datails()
         self.assertEqual(len(Credentials.credentials_list),1)
 
 
