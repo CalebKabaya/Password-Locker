@@ -29,5 +29,7 @@ class User :
       method to delete user from  the list
       """
       User.user_list.remove(self)
+
+      
 class Credentials:
     pass
