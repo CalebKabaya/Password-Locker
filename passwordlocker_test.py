@@ -71,6 +71,15 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_datails()
         self.assertEqual(len(Credentials.credentials_list),1)
 
+    def test_save_many_accounts(self):
+        """
+        test to check if we can save multiple credentials to our credentials list
+        """
+        self.new_credential.save_datails()
+        test_credential= Credentials("Spotify","calebm","121212")
+        test_credential.save_datails()
+        self.assertEqual(len(Credentials.credentials_list),2)
+
     def test_delete_credential(self):
         """
         test method to delete credential
@@ -92,6 +101,17 @@ class TestCredentials(unittest.TestCase):
 
         my_credential=Credentials.find_credential("Spotify")
         self.assertEqual(my_credential.account,test_credential.account)
+  
+    def test_credential_exists(self):
+        """
+        test is a credential exists in the credential list
+        """
+        self.new_credential.save_datails()
+        test_credential= Credentials("Spotify","calebm","121212")
+        test_credential.save_datails()
+        
+        credential_search =Credentials.credential_exist("spotfiy")
+        self.assertTrue(credential_search)
 
 if __name__ == '__main__':
     unittest.main()        
