@@ -112,6 +112,12 @@ class TestCredentials(unittest.TestCase):
         
         credential_search =Credentials.credential_exist("spotfiy")
         self.assertTrue(credential_search)
+     
+    def test_display_saved_credential(self):
+        """
+        test if we can desplay all the credentials saved
+        """
 
+        self.assertEqual(Credentials.display_credentials,Credentials.credentials_list)
 if __name__ == '__main__':
     unittest.main()        

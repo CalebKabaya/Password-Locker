@@ -63,3 +63,21 @@ class Credentials:
       for credential in cls.credentials_list:
         if credential.account == account:
           return credential
+
+    @classmethod
+    def verfiy_user(clas,name,password):
+      """
+      verift user credentials 
+      """     
+      user_login=""
+      for user in User.user_list:
+        if (user.name==name and user.password==password):
+          user_login == user.name
+          return user_login
+    
+    @classmethod
+    def display_credentials(cls):
+      """
+      method to shaw all saved credentials
+      """
+      return cls.credentials_list
