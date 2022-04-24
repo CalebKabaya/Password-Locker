@@ -1,5 +1,5 @@
-import pyperclip
-import random
+import pyperclip #importing pyperclip module for copying data to clipboard
+import random # for genererating random password
 import string
 
 from requests import delete

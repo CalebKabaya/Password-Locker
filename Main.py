@@ -100,13 +100,13 @@ def main():
         print("*"*70) 
     elif short_code == "login":
         print("*"*40)
-        print("Please enter you name and password")
+        print("Please enter you name and password ")
         print("*"*40)
         name= input("name")
         password= input("password")
         login=login_user(name,password)
         if login_user==login:
-            print(f"Hello{name}. Welcome To Password Locker")
+            print(f"Hello{name}. Welcome To Password Locker ")
             print('\n')
     while True:
         print("Use these  codes:\n create -To Create a new credential \n display -To Display Credentials \n find - Find a credential \n generate - Generate A randomn password \n delete - Delete credential \n exit - Exit the application \n")
