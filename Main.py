@@ -33,3 +33,46 @@ def create_new_credential(account,name,password):
     new_credentials= Credentials(account,name,password)
     return new_credentials
     
+def save_credentials(credentials):
+    """
+    save credentials to the credentials list
+    """
+    credentials.save_datails()
+
+def display_accounts_details():
+    """
+    show all the saved credential.
+    """
+    return Credentials.display_credentials()
+
+def delete_credential(credentials):
+    """
+    delete a credentials from credentials list
+    """
+    credentials.delete_credentials()
+
+def find_credential(account):
+    """
+    find a credential from the credential list using account
+    """
+    return Credentials.find_credential(account)
+
+def check_credendtials(account):
+    """
+    check if the credentials entere exist in the list
+    """
+    return Credentials.credential_exist(account)
+
+def generate_Password():
+    '''
+    generates a random password for the user.
+    '''
+    generated_new_password=Credentials.generatePassword()
+    return generated_new_password
+
+def copy_credentials(account):
+    """
+    A function that copies the credentials using the pyperclip
+    """
+    return Credentials.copy_credentials(account)
+
