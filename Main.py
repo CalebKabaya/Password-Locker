@@ -97,11 +97,11 @@ def main():
         save_user(create_new_user(name,password)) 
         print("*"*85)  
         print(f"Hello {name}, Your account has was created succesfully! Your password is: {password}")
-        print("*"*85) 
+        print("*"*70) 
     elif short_code == "login":
-        print("*"*50)
+        print("*"*40)
         print("Please enter you name and password")
-        print("*"*50)
+        print("*"*40)
         name= input("name")
         password= input("password")
         login=login_user(name,password)
@@ -137,8 +137,8 @@ def main():
             if display_accounts_details():
                 print("This are all your Accounts: ")
                  
-                print('*' * 30)
-                print('_'* 30)
+                print('*' * 40)
+                print('_'* 40)
                 for account in display_accounts_details():
                     print(f" Account:{account.account} \n User Name:{name}\n Password:{password}")
                     print('_'* 30)
@@ -151,9 +151,9 @@ def main():
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
                 print(f"Account Name : {search_credential.account}")
-                print('-' * 50)
+                print('-' * 60)
                 print(f"User Name: {search_credential.name} Password :{search_credential.password}")
-                print('-' * 50)
+                print('-' * 60)
             else:
                 print("The Credential does not exist")
                 print('\n')
