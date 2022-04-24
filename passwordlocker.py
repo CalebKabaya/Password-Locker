@@ -1,4 +1,6 @@
-
+import pyperclip
+import random
+import string
 
 from requests import delete
 
@@ -63,7 +65,15 @@ class Credentials:
       for credential in cls.credentials_list:
         if credential.account == account:
           return credential
-
+    @classmethod
+    def credential_exist(cls, account):
+        """
+        Method that checks if a credential exists from the credential list and returns true or false depending if the credential exists.
+        """
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return True
+        return False
     @classmethod
     def verfiy_user(clas,name,password):
       """
@@ -81,3 +91,16 @@ class Credentials:
       method to shaw all saved credentials
       """
       return cls.credentials_list
+
+    @classmethod
+    def copy_credentials(cls,account):
+        my_credential= Credentials.find_credential(account)
+        pyperclip.copy(my_credential.password)
+
+
+    def generatePassword(stringLength=8):
+        """
+        Generate a random password for the user
+        """
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+        return ''.join(random.choice(password) for i in range(stringLength))    
