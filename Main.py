@@ -133,7 +133,7 @@ def main():
             print('\n')
             print(f"Account Credential for: {account} - UserName: {name} - Password:{password} created succesfully")
             print('\n')
-        elif short_code == 'displdisplayay':
+        elif short_code == 'display':
             if display_accounts_details():
                 print("This are all your Accounts: ")
                  
